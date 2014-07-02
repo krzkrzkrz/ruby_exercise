@@ -4,6 +4,7 @@ require_relative '../rethink_mapper/query'
 require_relative '../rethink_mapper/persistence'
 require_relative '../rethink_mapper/association'
 require_relative '../rethink_mapper/validate'
+require_relative '../rethink_mapper/field'
 
 module RethinkMapper::Document
   # extend RethinkMapper::Query
@@ -13,5 +14,6 @@ module RethinkMapper::Document
     base.send :extend, RethinkMapper::Query
     base.send :extend, RethinkMapper::Association
     base.send :extend, RethinkMapper::Validate
+    base.send :extend, RethinkMapper::Field
   end
 end
