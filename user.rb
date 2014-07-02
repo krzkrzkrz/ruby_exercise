@@ -10,7 +10,7 @@ class User
   field :first_name
   field :last_name
   field :email_name
-  field :role
+  field :role, default: 'Admin'
   field :country_name, default: 'Philippines'
 end
 
