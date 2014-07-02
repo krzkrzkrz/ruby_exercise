@@ -10,7 +10,7 @@ class User
   field :first_name
   field :last_name
   field :email_name
-  field :role
+  field :role, default: 'Admin'
   field :country_name, default: 'Philippines'
 end
 
@@ -24,4 +24,5 @@ puts user.first_name # nil
 puts user.first_name = 'Jack'
 puts user.first_name # Jack
 
-puts user.country_name # Philippines
+puts user.country_name
+puts user.country_name = 'Germany'
