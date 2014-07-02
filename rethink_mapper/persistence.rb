@@ -3,4 +3,8 @@ module RethinkMapper::Persistence
   def save
     'saved'
   end
+
+  def find(id)
+    # ...
+  end
 end

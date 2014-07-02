@@ -1,6 +1,7 @@
 # rethink_mapper/document.rb
 require_relative '../rethink_mapper'
 require_relative '../rethink_mapper/query'
+require_relative '../rethink_mapper/model'
 require_relative '../rethink_mapper/persistence'
 require_relative '../rethink_mapper/association'
 require_relative '../rethink_mapper/validate'
@@ -9,6 +10,7 @@ require_relative '../rethink_mapper/field'
 module RethinkMapper::Document
   # extend RethinkMapper::Query
   include RethinkMapper::Persistence
+  include RethinkMapper::Model
 
   def self.included(base)
     base.send :extend, RethinkMapper::Query

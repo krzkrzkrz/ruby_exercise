@@ -6,10 +6,11 @@ module RethinkMapper::Field
     define_method(name) { instance_variable_get("@#{name}") }
 
     define_method("#{name}=") do |value|
-      puts hash
-      puts hash[:default]
-
-      instance_variable_set("@#{name}", value)
+      instance_variable_set("@#{name}", value || hash[:default])
     end
+  end
+
+  def to_s
+    "#{self.name} < RethinkMapper"
   end
 end
